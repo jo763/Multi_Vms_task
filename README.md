@@ -11,6 +11,7 @@
 # Add environment variable permanently
 echo "export DB_HOST=192.168.10.150:27017" >> .bashrc -y
 # Create multi-VMs
+```
 - Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu/xenial64"
@@ -34,10 +35,11 @@ echo "export DB_HOST=192.168.10.150:27017" >> .bashrc -y
   #provisisioning
 
 end
-
+```
 - https://www.vagrantup.com/docs/multi-machine
 
 # Setting up Nginx as a Reverse Proxy Server
+```
 - sudo nano /etc/nginx/sites-available/default
 - Within the server block you should have an existing location / block. Replace the contents of that block with the following configuration. If your application is set to listen on a different port, update the highlighted portion to the correct port number.
  -     location / {
@@ -48,6 +50,7 @@ end
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
     }
+```
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04
 
 # Setting up mongoDB
